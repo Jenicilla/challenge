@@ -65,42 +65,42 @@ def select_all_tasks():
             conn.close()
 
 
-def update_task(_id, data):
-    conn = create_connection()
+#def update_task(_id, data):
+#    conn = create_connection()
 
-    sql = f""" UPDATE tasks SET title = ?, completed = ?
-             WHERE id = {_id}
-    """
+#    sql = f""" UPDATE tasks SET title = ?, completed = ?
+#             WHERE id = {_id}
+#    """
 
-    try:
-        cur = conn.cursor()
-        cur.execute(sql, data)
-        conn.commit()
-        return True
-    except Error as e:
-        print(f"Error at update_task() : {str(e)}")
-        return False
+#    try:
+#        cur = conn.cursor()
+#        cur.execute(sql, data)
+#        conn.commit()
+#        return True
+#    except Error as e:
+#        print(f"Error at update_task() : {str(e)}")
+#        return False
 
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
+#    finally:
+#        if conn:
+#            cur.close()
+#            conn.close()
 
 
-def delete_task(_id):
-    conn = create_connection()
+#def delete_task(_id):
+#    conn = create_connection()
 
-    sql = f"DELETE FROM tasks WHERE id = {_id}"
+#    sql = f"DELETE FROM tasks WHERE id = {_id}"
 
-    try:
-        cur = conn.cursor()
-        cur.execute(sql)
-        conn.commit()
-        return True
-    except Error as e:
-        print(f"Error at delete_task() {str(e)}")
+#    try:
+#        cur = conn.cursor()
+#        cur.execute(sql)
+#        conn.commit()
+#        return True
+#    except Error as e:
+#        print(f"Error at delete_task() {str(e)}")
 
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
+#    finally:
+#        if conn:
+#            cur.close()
+#            conn.close()
