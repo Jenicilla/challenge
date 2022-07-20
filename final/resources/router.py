@@ -8,10 +8,28 @@ endpoints = Blueprint('routes-tasks', __name__)
 
 @endpoints.route('/tasks', methods=['POST'])
 def add_task():
-    title = request.json['title']
-    created_date = datetime.now().strftime("%x")
+    fec_alta = request.json['fec_alta']
+    user_name = request.json['user_name']
+    codigo_zip = request.json['codigo_zip']
+    credit_card_num = request.json['credit_card_num']
+    credit_card_ccv = request.json['credit_card_ccv']
+    cuenta_numero = request.json['cuenta_numero']
+    direccion = request.json['direccion']
+    geo_latitud = request.json['geo_latitud']
+    geo_longitud = request.json['geo_longitud']
+    color_favorito = request.json['color_favorito']
+    foto_dni = request.json['foto_dni']
+    ip = request.json['ip']
+    auto = request.json['auto']
+    auto_modelo = request.json['auto_modelo']
+    auto_tipo = request.json['auto_tipo']
+    auto_color = request.json['auto_color']
+    cantidad_compras_realizadas = request.json['cantidad_compras_realizadas']
+    avatar = request.json['avatar']
+    fec_birthday = request.json['fec_birthday']
+    id = request.json['id']
 
-    data = (title, created_date)
+    data = (fec_alta,user_name,codigo_zip,credit_card_num,credit_card_ccv,cuenta_numero,direccion,geo_latitud,geo_longitud,color_favorito,foto_dni,ip,auto,auto_modelo,auto_tipo,auto_color,cantidad_compras_realizadas,avatar,fec_birthday,id)
     task_id = tasks.insert_task(data)
 
     if task_id:
