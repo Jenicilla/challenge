@@ -6,8 +6,7 @@ from .connection import create_connection
 def insert_task(data):
     conn = create_connection()
 
-    sql = """ INSERT INTO tasks (title, created_date)
-             VALUES(?, ?)
+    sql = """ INSERT INTO tasks (fec_alta,user_name,codigo_zip,credit_card_num,credit_card_ccv,cuenta_numero,direccion,geo_latitud,geo_longitud,color_favorito,foto_dni,ip,auto,auto_modelo,auto_tipo,auto_color,cantidad_compras_realizadas,avatar,fec_birthday,id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
     """
 
     try:

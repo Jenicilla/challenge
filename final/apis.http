@@ -5,13 +5,13 @@ GET http://127.0.0.1:5000/tasks HTTP/1.1
 GET http://127.0.0.1:5000/tasks/one?id=1 HTTP/1.1
 
 ### actualiza uno
-PUT http://127.0.0.1:5000/tasks?id=1 HTTP/1.1
-Content-Type: application/json
+#PUT http://127.0.0.1:5000/tasks?id=1 HTTP/1.1
+#Content-Type: application/json
 
-{
-    "title":"nadas",
-    "completed":1
-}
+#{
+#    "title":"nadas",
+#    "completed":1
+#}
 
 
 ### agregar
@@ -19,8 +19,26 @@ POST http://127.0.0.1:5000/tasks HTTP/1.1
 Content-Type: application/json
 
 {
-    "title":"nadaSS",
-    "created_date":"2020/05/05"
+    "id":97,
+    "fec_alta":"2021-07-16T06:58:57.378Z",
+    "user_name":"Holden_McClure4",
+    "codigo_zip":"28141-0026",
+    "credit_card_num":"6706769956221570",
+    "credit_card_ccv":"072",
+    "cuenta_numero":"53866118",
+    "direccion":"Bins Knolls",
+    "geo_latitud":"88.5448",
+    "geo_longitud":"59.8183",
+    "color_favorito":"fuchsia",
+    "foto_dni":"http://placeimg.com/640/480",
+    "ip":"62.146.60.62",
+    "auto":"Hyundai Explorer",
+    "auto_modelo":"Durango",
+    "auto_tipo":"Sedan",
+    "auto_color":"Maserati Civic",
+    "cantidad_compras_realizadas":86770,
+    "avatar":"https://cdn.fakercloud.com/avatars/kylefoundry_128.jpg",
+    "fec_birthday":"2022-03-29T17:39:39.571Z"
 }
 
 ### eliminar
